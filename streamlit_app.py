@@ -81,11 +81,28 @@ if streamlit.button('add a fruit to the list'):
 import pandas as pd
 import streamlit as st
 import plotly.express as plt
+import matplotlib.pyplot as plt
 
 df = pd.read_csv('https://raw.githubusercontent.com/Kavy-gupta/first_streamlit_app/main/veg_plant_height.csv')
 #st.dataframe(df)
-fig=plt.bar(df,x=plant_name,y=Low_End_of_Range,orientation="h",)
-st.plotly_chart(fig)
+#fig=plt.bar(df,x=plant_name,y=Low_End_of_Range,orientation="h",)
+#st.plotly_chart(fig)
+
+
+# Step 2: Process the data (assuming you have 'categories' and 'values' columns)
+categories = df['plant_name']
+values = df['Low_End_of_Range']
+
+# Step 3: Choose a Visualization Library (matplotlib is used in this example)
+# You need to have matplotlib installed, you can install it using: pip install matplotlib
+
+# Step 4: Plot the Bar Chart
+plt.bar(plant_name,Low_End_of_Range)
+plt.xlabel('plant_name')
+plt.ylabel('Low_End_of_Range')
+plt.title('Bar Chart from GitHub Data')
+plt.xticks(rotation=45)  # Rotates the category labels on the x-axis for better readability
+plt.show()
 
 
 
