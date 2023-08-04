@@ -83,9 +83,10 @@ import matplotlib.pyplot as plt
 
 df = pd.read_csv('C:/Users/harsh/Desktop/kavya/64squres/veg_plant_height.csv')
 df.hist(bins=50, figsize=(10, 8))
+plt.show()
 
 '''
-plt.show()
+
 plt.plot(df['x'], df['y'])
 plt.xlabel('X-axis')
 plt.ylabel('Y-axis')
