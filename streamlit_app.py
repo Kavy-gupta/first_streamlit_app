@@ -1,3 +1,4 @@
+'''
 import streamlit
 import pandas
 import requests
@@ -75,3 +76,19 @@ if streamlit.button('add a fruit to the list'):
       my_cnx=snowflake.connector.connect(**streamlit.secrets["snowflake"])
       back_from_function=insert_row_snowflake(add_my_fruit)
       streamlit.text(back_from_function)
+'''
+
+import pandas as pd
+import matplotlib.pyplot as plt
+
+df = pd.read_csv('C:\Users\harsh\Desktop\kavya\64squres\veg_plant_height.csv')
+df.hist(bins=50, figsize=(10, 8))
+
+'''
+plt.show()
+plt.plot(df['x'], df['y'])
+plt.xlabel('X-axis')
+plt.ylabel('Y-axis')
+plt.title('Line Plot')
+plt.show()
+'''
