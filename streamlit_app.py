@@ -81,7 +81,7 @@ if streamlit.button('add a fruit to the list'):
 import pandas as pd
 #import plotly.express as plt
 
-df = pd.read_csv('https://raw.githubusercontent.com/Kavy-gupta/Kavy-gupta/main/veg_plant_height.csv')
+df = pd.read_csv('https://raw.githubusercontent.com/Kavy-gupta/first_streamlit_app/main/veg_plant_height.csv')
 df.head()
 #fig=plt.bar(df,x=plant_name,y=Low_End_of_Range,orientation="h",)
 #plotly_chart(fig)
