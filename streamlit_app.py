@@ -82,15 +82,9 @@ import pandas as pd
 #import plotly.express as plt
 
 df = pd.read_csv('https://raw.githubusercontent.com/Kavy-gupta/first_streamlit_app/main/veg_plant_height.csv')
-df.head()
+df.head(5)
 #fig=plt.bar(df,x=plant_name,y=Low_End_of_Range,orientation="h",)
 #plotly_chart(fig)
 
 
-'''
-plt.plot(df['x'], df['y'])
-plt.xlabel('X-axis')
-plt.ylabel('Y-axis')
-plt.title('Line Plot')
-plt.show()
-'''
+
