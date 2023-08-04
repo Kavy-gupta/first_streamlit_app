@@ -1,4 +1,4 @@
 #requirementstxt
 snowflake-connector-python
 
-matplotlib
+matplotlib-pyplot
