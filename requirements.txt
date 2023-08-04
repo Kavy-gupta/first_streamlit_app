@@ -1,3 +1,3 @@
 #requirementstxt
 snowflake-connector-python
-matplotlib-pyplot
+matplotlib==3.6.2
