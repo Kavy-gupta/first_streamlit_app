@@ -78,13 +78,33 @@ if streamlit.button('add a fruit to the list'):
       streamlit.text(back_from_function)
 '''
 
-import pandas as pd
-import streamlit as st
+#import pandas as pd
+#import streamlit as st
 #import plotly.express as plt
 #mport matplotlib.pyplot as plt
 
-df = pd.read_csv('https://raw.githubusercontent.com/Kavy-gupta/first_streamlit_app/main/veg_plant_height.csv')
+#df = pd.read_csv('https://raw.githubusercontent.com/Kavy-gupta/first_streamlit_app/main/veg_plant_height.csv')
 #st.dataframe(df)
 #fig=plt.bar(df,x=plant_name,y=Low_End_of_Range,orientation="h",)
 #st.bar_chart(df['Low_End_of_Range'])
-st.bar_chart(df)            
+#st.bar_chart(df)            
+
+import pandas as pd
+import streamlit as st
+
+# Load the DataFrame
+df = pd.read_csv('https://raw.githubusercontent.com/Kavy-gupta/first_streamlit_app/main/veg_plant_height.csv')
+
+# Page title
+st.title('Plant Data Visualization')
+
+# 1. Bar Chart comparing 'plant_name' with 'Low_End_of_Range'
+st.header('Bar Chart: Low End of Range')
+bar_chart_low_end = df.plot.bar(x='plant_name', y='Low_End_of_Range', legend=False)
+st.pyplot(bar_chart_low_end.figure)
+
+# 2. Bar Chart comparing 'plant_name' with 'High_End_of_Range'
+st.header('Bar Chart: High End of Range')
+bar_chart_high_end = df.plot.bar(x='plant_name', y='High_End_of_Range', legend=False)
+st.pyplot(bar_chart_high_end.figure)
+
