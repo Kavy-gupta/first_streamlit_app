@@ -82,6 +82,7 @@ import pandas as pd
 #import plotly.express as plt
 
 df = pd.read_csv('C:/Users/harsh/Desktop/kavya/64squres/veg_plant_height.csv')
+df.head()
 #fig=plt.bar(df,x=plant_name,y=Low_End_of_Range,orientation="h",)
 #plotly_chart(fig)
 
