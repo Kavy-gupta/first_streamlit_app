@@ -1,2 +1,4 @@
 #requirementstxt
 snowflake-connector-python
+
+pip install matplotlib
