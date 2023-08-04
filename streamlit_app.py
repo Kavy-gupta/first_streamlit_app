@@ -79,6 +79,7 @@ if streamlit.button('add a fruit to the list'):
 '''
 
 import pandas as pd
+pip install plotly
 import plotly.express as plt
 
 df = pd.read_csv('C:/Users/harsh/Desktop/kavya/64squres/veg_plant_height.csv')
