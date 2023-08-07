@@ -102,7 +102,7 @@ bar_chart_low_end = st.bar_chart(df[['plant_name', 'Low_End_of_Range']])
 
 # Bar chart comparing 'plant_name' with 'High_End_of_Range'
 st.header('Bar Chart: High End of Range')
-bar_chart_high_end = st.bar_chart(df[['plant_name', 'High_End_of_Range']])
+bar_chart_high_end = st.bar_chart(df[['plant_name', 'High_End_of_Range']]) 
 '''
 
 import pandas as pd
