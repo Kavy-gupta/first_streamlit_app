@@ -77,6 +77,7 @@ if streamlit.button('add a fruit to the list'):
       back_from_function=insert_row_snowflake(add_my_fruit)
       streamlit.text(back_from_function)
 
+'''
 
 import pandas as pd
 import streamlit as st
@@ -87,7 +88,8 @@ df = pd.read_csv('https://raw.githubusercontent.com/Kavy-gupta/first_streamlit_a
 #st.dataframe(df)
 #fig=plt.bar(df,x=plant_name,y=Low_End_of_Range,orientation="h",)
 st.bar_chart(df['plant_name'],df['Low_End_of_Range'])
-#st.bar_chart(df)            
+#st.bar_chart(df)    
+
 '''
 
 import pandas as pd
@@ -116,4 +118,4 @@ plt.bar(df['plant_name'], df['High_End_of_Range'])
 plt.xlabel('Plant Name')
 plt.ylabel('High End of Range')
 st.pyplot(plt)
-
+'''
