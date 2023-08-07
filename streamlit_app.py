@@ -88,7 +88,7 @@ df = pd.read_csv('https://raw.githubusercontent.com/Kavy-gupta/first_streamlit_a
 #st.dataframe(df)
 #fig=plt.bar(df,x=plant_name,y=Low_End_of_Range,orientation="h",)
 st.bar_chart(df['Low_End_of_Range'])
-#st.bar_chart(df)    
+st.bar_chart(df)    
 
 '''
 
