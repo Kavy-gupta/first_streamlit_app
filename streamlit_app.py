@@ -92,6 +92,7 @@ st.bar_chart(df)
 '''
 import pandas as pd
 import streamlit as st
+import matplotlib
 
 df = pd.read_csv('https://raw.githubusercontent.com/Kavy-gupta/first_streamlit_app/main/veg_plant_height.csv')
 
