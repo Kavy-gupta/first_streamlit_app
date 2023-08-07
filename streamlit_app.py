@@ -115,6 +115,8 @@ df = pd.read_csv('https://raw.githubusercontent.com/Kavy-gupta/first_streamlit_a
 # Page title
 st.title('Plant Data Visualization')
 
+c1, c2= st.columns(2)
+
 with st.container():
     c1.write("c1")
     c2.write("c2")
