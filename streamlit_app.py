@@ -76,7 +76,7 @@ if streamlit.button('add a fruit to the list'):
       my_cnx=snowflake.connector.connect(**streamlit.secrets["snowflake"])
       back_from_function=insert_row_snowflake(add_my_fruit)
       streamlit.text(back_from_function)
-'''
+
 
 import pandas as pd
 import streamlit as st
@@ -88,5 +88,32 @@ df = pd.read_csv('https://raw.githubusercontent.com/Kavy-gupta/first_streamlit_a
 #fig=plt.bar(df,x=plant_name,y=Low_End_of_Range,orientation="h",)
 st.bar_chart(df['plant_name'],df['Low_End_of_Range'])
 #st.bar_chart(df)            
+'''
 
+import pandas as pd
+import streamlit as st
+import matplotlib
+import matplotlib.pyplot as plt
+
+# Load the DataFrame
+df = pd.read_csv('https://raw.githubusercontent.com/Kavy-gupta/first_streamlit_app/main/veg_plant_height.csv')
+
+# Page title
+st.title('Plant Data Visualization')
+
+# 1. Bar Chart comparing 'plant_name' with 'Low_End_of_Range'
+st.header('Bar Chart: Low End of Range')
+plt.figure(figsize=(10, 6))
+plt.bar(df['plant_name'], df['Low_End_of_Range'])
+plt.xlabel('Plant Name')
+plt.ylabel('Low End of Range')
+st.pyplot(plt)
+
+# 2. Bar Chart comparing 'plant_name' with 'High_End_of_Range'
+st.header('Bar Chart: High End of Range')
+plt.figure(figsize=(10, 6))
+plt.bar(df['plant_name'], df['High_End_of_Range'])
+plt.xlabel('Plant Name')
+plt.ylabel('High End of Range')
+st.pyplot(plt)
 
