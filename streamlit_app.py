@@ -107,7 +107,6 @@ bar_chart_high_end = st.bar_chart(df[['plant_name', 'High_End_of_Range']])
 
 import pandas as pd
 import streamlit as st
-
 import matplotlib.pyplot as plt
 
 # Load the DataFrame
@@ -122,6 +121,7 @@ plt.figure(figsize=(10, 6))
 plt.bar(df['plant_name'], df['Low_End_of_Range'])
 plt.xlabel('Plant Name')
 plt.ylabel('Low End of Range')
+plt.xticks(rotation=90)
 st.pyplot(plt)
 
 # 2. Bar Chart comparing 'plant_name' with 'High_End_of_Range'
@@ -130,6 +130,7 @@ plt.figure(figsize=(10, 6))
 plt.bar(df['plant_name'], df['High_End_of_Range'])
 plt.xlabel('Plant Name')
 plt.ylabel('High End of Range')
+plt.xticks(rotation=90)
 st.pyplot(plt)
 
 
