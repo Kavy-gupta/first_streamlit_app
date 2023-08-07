@@ -115,6 +115,11 @@ df = pd.read_csv('https://raw.githubusercontent.com/Kavy-gupta/first_streamlit_a
 # Page title
 st.title('Plant Data Visualization')
 
+with st.container():
+    c1.write("c1")
+    c2.write("c2")
+
+with c1:
 # 1. Bar Chart comparing 'plant_name' with 'Low_End_of_Range'
 st.header('Bar Chart: Low End of Range')
 plt.figure(figsize=(10, 6))
@@ -124,6 +129,7 @@ plt.ylabel('Low End of Range')
 plt.xticks(rotation=90)
 st.pyplot(plt)
 
+with c2:
 # 2. Bar Chart comparing 'plant_name' with 'High_End_of_Range'
 st.header('Bar Chart: High End of Range')
 plt.figure(figsize=(10, 6))
