@@ -107,6 +107,7 @@ bar_chart_high_end = st.bar_chart(df[['plant_name', 'High_End_of_Range']])
 
 import pandas as pd
 import streamlit as st
+import matplotlib
 import matplotlib.pyplot as plt
 
 # Load the DataFrame
